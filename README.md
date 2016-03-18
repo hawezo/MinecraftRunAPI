@@ -5,6 +5,13 @@ It is really simple to use.
 
 ## Preparation
 
+### Getting [the JSON.NET library](http://www.newtonsoft.com/json)
+
+This API requires [the JSON.NET library](http://www.newtonsoft.com/json) to run properly.
+In fact, it will not work if this API is missing, since it is used to retrieve the datas in the <version>.JSON file.
+
+### Getting the natives
+
 Before you can use MinecraftRunAPI to launch Minecraft, you will have to get the natives corresponding at the version you want to launch.
 Those natives are automatically downloaded by the official launcher at runtime, and deleted after Minecraft is closed.
 
