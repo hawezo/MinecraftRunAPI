@@ -5,7 +5,7 @@ It is really simple to use.
 
 ## Preparation
 
-### Getting [the JSON.NET library](http://www.newtonsoft.com/json)
+### Getting the JSON.NET library
 
 This API requires [the JSON.NET library](http://www.newtonsoft.com/json) to run properly.
 In fact, it will not work if this API is missing, since it is used to retrieve the datas in the <version>.JSON file.
@@ -90,7 +90,7 @@ new UserCredentials(
 ```
 This example will run Minecraft 1.9 if the folder `C:\Users\<you>\AppData\Roaming\.minecraft\natives\1.9-natives` contains the 1.9 natives files.
 
-## Ro-do
+  ## To-do
 
 - [ ] Add a way to redirect the console stream
 
