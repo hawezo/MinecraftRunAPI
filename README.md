@@ -55,9 +55,26 @@ The parameter of the method `GetCommandLine()` determine if the java executable 
 ```csharp
 MinecraftCommand.Run();
 ```
-If you launch Minecraft like this, you'll have to show the console in order to get the log.
-_I'm working on a way to redirect the stream, which is easy and should not take a long time._
 
+### Redirecting the output
+
+`CommandLine.Run()` has now three constructors.
+
+```csharp
+public void Run()
+```
+This one will simply run the command line and show the output on the console.
+
+```chsarp
+public void Run(StreamWriter stream)
+```
+This one will run the command line and show the output on the console **and** on the StreamWriter passed as an argument.
+Note that you can pass an empty stream (`null`). In this case, it works as the first constructor.
+
+```csharp
+public void Run(StreamWriter stream, bool log)
+```
+By default, the second argument, `log`, is set to true. If false, the output will no be redirected to the console.
 
 ## UserCredentials
 
