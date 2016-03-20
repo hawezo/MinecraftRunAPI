@@ -37,7 +37,7 @@ Now, you can easily get the command line that will be used to launcher Minecraft
 ```csharp
 CommandLine MinecraftCommand = new CommandLine(
   @"1.9",
-  new UserCredentials("<UUID>, <Username>, <AccessToken>"),
+  new UserCredentials("<UUID>", "<Username>", "<AccessToken>"),
   @"C:\Users\<You>\AppData\Roaming\.minecraft\natives\<version>-natives"
   );
 ```
