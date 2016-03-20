@@ -90,7 +90,7 @@ new UserCredentials(
 ```
 This example will run Minecraft 1.9 if the folder `C:\Users\<you>\AppData\Roaming\.minecraft\natives\1.9-natives` contains the 1.9 natives files.
 
-  ## To-do
+## To-do
 
 - [ ] Add a way to redirect the console stream
 
