@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Threading;
 
 namespace MinecraftLaunching
 {
@@ -336,6 +337,27 @@ namespace MinecraftLaunching
         /// <returns></returns>
         public void Run()
         {
+            this.Run(null);
+        }
+
+        /// <summary>
+        /// Run an instance of Minecraft.
+        /// </summary>
+        /// <param name="stream">The StreamWriter to return the console.</param>
+        /// <returns></returns>
+        public void Run(StreamWriter stream)
+        {
+            this.Run(stream, true);
+        }
+
+        /// <summary>
+        /// Run an instance of Minecraft.
+        /// </summary>
+        /// <param name="stream">The StreamWriter to return the console.</param>
+        /// <returns></returns>
+        /// <param name="log">If False, the output will not be written in the console.</param>
+        public void Run(StreamWriter stream, bool log)
+        {
             Process Minecraft = new Process
             {
                 StartInfo = new ProcessStartInfo
@@ -352,8 +374,20 @@ namespace MinecraftLaunching
             while (!Minecraft.StandardOutput.EndOfStream)
             {
                 string line = Minecraft.StandardOutput.ReadLine();
-                Console.WriteLine(line);
+                if (stream != null)
+                {
+                    stream.WriteLine(line);
+                    if (log)
+                        Console.WriteLine(line);
+                }
+                else
+                {
+                    Console.WriteLine(line);
+                }
             }
+
+            if (stream != null)
+                stream.Dispose();
         }
     }
 }
