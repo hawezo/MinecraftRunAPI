@@ -1,3 +1,5 @@
+**!** This project may be not working anymore.
+
 # MinecraftRunAPI
 
 MinecraftRunAPI is a class library created in C# (usable in all .NET languages) in order to facilitate the launching of Minecraft from your applications or custom launchers.
